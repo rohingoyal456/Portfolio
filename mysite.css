@@ -1,18 +1,14 @@
+html{
+    scroll-behavior: smooth;
+}
 body{
     margin:0;
     font-family:serif;
     text-align: center;
     color:#40514E;
-    background-color: #d3dbff;
-}
-.Mountain{
-    width:100%;
-    height:600px;
-}
-.lady{
-    position: absolute;
-    right:30px;
-    top:200px;
+    background-color: white;
+    cursor: default;
+    padding: 0;
 }
 h1{
     margin: 0;
@@ -35,15 +31,6 @@ p{
     font-size: 20px;
     line-height:1.5;
 }
-.detail{
-    position: absolute;
-    top:120px;
-    left: 570px;
-    font-family: 'Merriweather', serif;
-    font-size: 2.35rem;
-    font-weight: normal;
-    color:black;
-}
 .Rohin{
     width:250px;
     height: 250px;
@@ -60,17 +47,18 @@ hr{
     width: 200px;
     height: 200px;
     float: left;
-    margin: 30px;
+    margin: 20px 30px 20px 0;
 }
 .c{
     width: 200px;
     height: 200px;
     float:right;
+    margin: 0 20px 0 20px;
 }
 .skill-row{
     display: inline-block;
     width: 50%;
-    text-align: left;
+    text-align: center;
 }
 .Contact_message{
     width: 40%;
@@ -126,4 +114,39 @@ a{
 }
 a:hover{
     color:#3282b8;
+}
+.container{
+    position: relative;
+    width: 100%;
+}
+.image{
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: 39rem;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+.middle{
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+.container:hover .image{
+    opacity: 0.3;
+}
+.container:hover .middle{
+    opacity: 1;
+}
+.text{
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius:3px;
+    color: white;
+    font-size: 20px;
+    padding: 16px 32px;
 }
